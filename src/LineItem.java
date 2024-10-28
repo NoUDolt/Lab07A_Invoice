@@ -1,5 +1,5 @@
 public class LineItem {
-    /*private Product product;
+    private Product product;
     private int quantity;
 
     public LineItem(Product product, int quantity) {

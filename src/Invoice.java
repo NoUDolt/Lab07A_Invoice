@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Invoice {
-    /*private ArrayList<LineItem> lineItems;
+    private ArrayList<LineItem> lineItems;
     private Address customerAddress;
 
     public Invoice(Address customerAddress) {

@@ -12,13 +12,13 @@ public class InvoiceGUI extends JFrame {
 
     public InvoiceGUI() {
         setTitle("Invoice Application");
-        setSize(400, 400);
+        setSize(600, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
         // Address input (for simplicity, hardcoded here)
-        //Address customerAddress = new Address("123 Main St", "Cincinnati", "OH", "45202");
-        //invoice = new Invoice(customerAddress);
+        Address customerAddress = new Address("123 Main St", "Cincinnati", "OH", "45202");
+        invoice = new Invoice(customerAddress);
 
         // Input Panel
         JPanel inputPanel = new JPanel();
@@ -60,9 +60,9 @@ public class InvoiceGUI extends JFrame {
                 double unitPrice = Double.parseDouble(unitPriceField.getText());
                 int quantity = Integer.parseInt(quantityField.getText());
 
-                //Product product = new Product(name, unitPrice);
-                //LineItem lineItem = new LineItem(product, quantity);
-                //invoice.addLineItem(lineItem);
+                Product product = new Product(name, unitPrice);
+                LineItem lineItem = new LineItem(product, quantity);
+                invoice.addLineItem(lineItem);
 
                 productNameField.setText("");
                 unitPriceField.setText("");
@@ -77,7 +77,7 @@ public class InvoiceGUI extends JFrame {
 
     private class DisplayInvoiceListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-           // invoiceDisplay.setText(invoice.displayInvoice());
+           invoiceDisplay.setText(invoice.displayInvoice());
         }
     }
 
